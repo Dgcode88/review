@@ -1,33 +1,48 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Search, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 const navLinks = [
-  { label: 'Reviews', href: '#' },
-  { label: 'Categories', href: '#' },
-  { label: 'Methodology', href: '#' },
-  { label: 'Guides', href: '#' },
-  { label: 'About', href: '#' },
+  { label: 'Top Picks', href: '#featured' },
+  { label: 'Reviews', href: '#latest' },
+  { label: 'Methodology', href: '#methodology' },
+  { label: 'Guides', href: '#newsletter' },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/80 backdrop-blur-xl border-b border-primary/10 py-3 shadow-sm'
+          : 'bg-transparent border-transparent py-5'
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <Sparkles className="w-5 h-5 text-white" />
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${scrolled ? 'bg-primary text-white' : 'bg-white/10 text-white backdrop-blur-md'
+              }`}>
+              <Sparkles className="w-5 h-5" />
             </div>
-            <span className="font-display text-2xl font-bold">
-              <span className="text-slate-900">Review</span>
-              <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">CatLitter</span>
+            <span className={`font-display text-2xl font-bold transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'
+              }`}>
+              Review<span className={scrolled ? 'text-accent' : 'text-white/80'}>CatLitter</span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -35,20 +50,24 @@ export function Header() {
               <a
                 key={index}
                 href={link.href}
-                className="relative text-slate-600 hover:text-slate-900 font-medium transition-colors duration-300 group"
+                className={`text-sm font-medium transition-colors duration-300 hover:text-accent ${scrolled ? 'text-primary/80' : 'text-white/90'
+                  }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
 
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors duration-300">
-              <Search className="w-5 h-5 text-slate-600" />
+            <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${scrolled ? 'bg-secondary hover:bg-secondary/80 text-primary' : 'bg-white/10 hover:bg-white/20 text-white'
+              }`}>
+              <Search className="w-5 h-5" />
             </button>
-            <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+            <button className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${scrolled
+                ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                : 'bg-white text-primary hover:bg-white/90'
+              }`}>
               Subscribe
             </button>
           </div>
@@ -56,7 +75,8 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors duration-300"
+            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-primary' : 'text-white'
+              }`}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -65,23 +85,22 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-xl">
-          <nav className="px-6 py-8 space-y-2">
+        <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-xl p-6 md:hidden">
+          <nav className="flex flex-col space-y-4">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="block text-lg text-slate-600 hover:text-slate-900 font-medium py-3 px-4 rounded-xl hover:bg-slate-100 transition-all duration-300"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <div className="pt-4 space-y-3">
-              <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 rounded-xl font-semibold shadow-lg">
-                Subscribe
-              </button>
-            </div>
+            <hr className="border-border" />
+            <button className="w-full bg-primary text-primary-foreground py-3 rounded-xl font-semibold shadow-lg">
+              Subscribe
+            </button>
           </nav>
         </div>
       )}

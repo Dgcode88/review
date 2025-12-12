@@ -74,13 +74,13 @@ export function Hero() {
       </div>
 
       {/* Floating Cats (Decorations) - Positioned absolutely to frame the content */}
-      <FadeIn delay={0.8} className="absolute top-1/2 -translate-y-1/2 left-[5%] hidden 2xl:block pointer-events-none">
-        <div className="relative w-72 aspect-[3/4] rounded-3xl overflow-hidden rotate-[-6deg] shadow-2xl border-4 border-white/50 bg-white/10 backdrop-blur-sm">
+      <FadeIn delay={0.8} className="absolute top-1/2 -translate-y-1/2 left-[2%] hidden xl:block pointer-events-none">
+        <div className="relative w-64 xl:w-72 aspect-[3/4] rounded-3xl overflow-hidden rotate-[-6deg] shadow-2xl border-4 border-white/50 bg-white/10 backdrop-blur-sm">
           <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80" alt="Cat" className="w-full h-full object-cover opacity-90" />
         </div>
       </FadeIn>
-      <FadeIn delay={1.0} className="absolute top-1/2 -translate-y-1/2 right-[5%] hidden 2xl:block pointer-events-none">
-        <div className="relative w-72 aspect-[3/4] rounded-3xl overflow-hidden rotate-[6deg] shadow-2xl border-4 border-white/50 bg-white/10 backdrop-blur-sm">
+      <FadeIn delay={1.0} className="absolute top-1/2 -translate-y-1/2 right-[2%] hidden xl:block pointer-events-none">
+        <div className="relative w-64 xl:w-72 aspect-[3/4] rounded-3xl overflow-hidden rotate-[6deg] shadow-2xl border-4 border-white/50 bg-white/10 backdrop-blur-sm">
           <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&q=80" alt="Cat" className="w-full h-full object-cover opacity-90" />
         </div>
       </FadeIn>

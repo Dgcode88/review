@@ -164,18 +164,18 @@ const categoryData: CategoryData = {
 
 const buyingGuide = (
     <>
-        <h3>The Hidden Dangers of dust</h3>
+        <h3>The &quot;99% Dust Free&quot; Myth</h3>
         <p>
-            Many "lightweight" litters achieve their weight by fluffing up the clay, which often results in massive dust clouds. This is terrible for respiratory health.
+            Almost every brand claims this. It is a lie. There is no regulation for what &quot;99%&quot; means (by weight? by particle count?).
         </p>
 
-        <div className="bg-sky-50 border-l-4 border-sky-500 p-6 my-6 rounded-r-xl">
-            <h4 className="font-bold text-sky-900 mb-2">💡 Dust and Odor are Linked</h4>
-            <p className="text-sky-800 mb-4">
-                Often, dust carries odor particles through the air. Eliminating dust helps eliminate the "litter smell" in your house.
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-xl">
+            <h4 className="font-bold text-blue-900 mb-2">💡 Pro Tip for Asthma</h4>
+            <p className="text-blue-800 mb-4">
+                Even low-dust clay litters can trigger asthma. If you or your cat are sensitive, switch to a plant-based litter (like World&apos;s Best) immediately. Clay dust contains silica, which is distinct from plant dust.
             </p>
             <p className="text-sky-800">
-                To maximize Clean Air in your home, pair a low-dust litter like Dr. Elsey's with <a href="https://purrify.ca" target="_blank" className="font-bold underline hover:text-sky-950">Purrify Deodorizer</a>.
+                To maximize Clean Air in your home, pair a low-dust litter like Dr. Elsey&apos;s with <a href="https://purrify.ca" target="_blank" className="font-bold underline hover:text-sky-950">Purrify Deodorizer</a>.
             </p>
             <p className="font-bold text-sky-900 mt-2">
                 Purrify helps break down waste before it dries out and becomes airborne dust particles.

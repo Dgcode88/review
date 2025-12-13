@@ -18,8 +18,8 @@ const categories = [
     label: 'Silica Crystal',
     slug: 'silica-crystal',
     count: '80+ Reviews',
-    gradient: 'from-primary to-emerald-600',
-    bgGradient: 'from-primary/10 to-emerald-600/10',
+    gradient: 'from-slate-400 to-slate-600',
+    bgGradient: 'from-slate-400/10 to-slate-600/10',
     image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&q=80'
   },
   {
@@ -27,8 +27,8 @@ const categories = [
     label: 'Natural/Eco',
     slug: 'natural-eco',
     count: '120+ Reviews',
-    gradient: 'from-green-500 to-emerald-700',
-    bgGradient: 'from-green-500/10 to-emerald-700/10',
+    gradient: 'from-primary to-emerald-600',
+    bgGradient: 'from-primary/10 to-emerald-600/10',
     image: 'https://images.unsplash.com/photo-1573865526739-10c1dd7aa5d0?w=300&q=80'
   },
   {
@@ -36,8 +36,8 @@ const categories = [
     label: 'Lightweight',
     slug: 'lightweight',
     count: '60+ Reviews',
-    gradient: 'from-amber-400 to-orange-500',
-    bgGradient: 'from-amber-400/10 to-orange-500/10',
+    gradient: 'from-emerald-400 to-teal-500',
+    bgGradient: 'from-emerald-400/10 to-teal-500/10',
     image: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=300&q=80'
   },
   {
@@ -45,8 +45,8 @@ const categories = [
     label: 'Odor Control',
     slug: 'odor-control',
     count: '90+ Reviews',
-    gradient: 'from-primary to-green-700',
-    bgGradient: 'from-primary/10 to-green-700/10',
+    gradient: 'from-accent to-amber-700',
+    bgGradient: 'from-accent/10 to-amber-700/10',
     image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=300&q=80'
   },
 ];
@@ -68,7 +68,7 @@ export function CategoryNavigation() {
             Find What <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Actually Works</span> for Your Situation
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Don't guess. Pick the category that matches your specific problem.
+            Don&apos;t guess. Pick the category that matches your specific problem.
           </p>
         </div>
 

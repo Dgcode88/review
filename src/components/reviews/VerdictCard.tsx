@@ -23,7 +23,7 @@ export function VerdictCard({ verdict, bestFor, skipIf, score }: VerdictCardProp
                             The Verdict
                         </div>
                         <p className="text-xl md:text-2xl text-white font-medium leading-relaxed italic">
-                            "{verdict}"
+                            &quot;{verdict}&quot;
                         </p>
                     </div>
 
@@ -35,6 +35,9 @@ export function VerdictCard({ verdict, bestFor, skipIf, score }: VerdictCardProp
                     </div>
                 </div>
 
+                <h3 className="font-bold text-lg mb-2">
+                    Is it &quot;worth it&quot;?
+                </h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Best For */}
                     <div>

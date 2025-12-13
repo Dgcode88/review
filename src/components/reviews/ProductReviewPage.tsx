@@ -73,7 +73,7 @@ export function ProductReviewPage({ data, children }: ProductReviewPageProps) {
                                 {/* Score Badge Overlay */}
                                 <div className="absolute top-6 right-6 z-10 flex flex-col items-center">
                                     <ScoreBadge score={data.overallScore} size="xl" className="shadow-2xl mb-2" />
-                                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground bg-white/50 backdrop-blur-sm px-2 py-1 rounded-full">Editor's Score</span>
+                                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground bg-white/50 backdrop-blur-sm px-2 py-1 rounded-full">Editor&apos;s Score</span>
                                 </div>
 
                                 {/* Main Image */}
@@ -139,8 +139,9 @@ export function ProductReviewPage({ data, children }: ProductReviewPageProps) {
                                     <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-border">
                                         <div className="p-6 space-y-4">
                                             <div className="flex justify-between items-center">
-                                                <span className="text-muted-foreground text-sm font-medium">Type</span>
-                                                <span className="font-bold">{data.specs.type}</span>
+                                                <div className="bg-red-50 text-red-700 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+                                                    <span className="bg-red-100 p-1 rounded-full">🚫</span> {data.name} doesn&apos;t meet our standards
+                                                </div>
                                             </div>
                                             <div className="flex justify-between items-center">
                                                 <span className="text-muted-foreground text-sm font-medium">Price Tier</span>

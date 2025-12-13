@@ -166,20 +166,27 @@ const buyingGuide = (
     <>
         <h3>The Two Types of Odor Control</h3>
         <p>
-            <strong>1. Masking (Scented):</strong> Overwhelms the nose with perfume. Works fast, but can be nauseating. (e.g., Arm & Hammer)<br />
-            <strong>2. Sealing/Absorbing (Unscented):</strong> Locks moisture away so bacteria can't grow. Slower, but cleaner. (e.g., Dr. Elsey's, PrettyLitter)
+            If you live in a small apartment, you can&apos;t afford cheap litter. The smell permeates <em>everything</em>—your clothes, your sofa, your bed.
+        </p>
+        <p>
+            You need a litter with <strong>Activated Carbon</strong> or probiotics. Baking soda alone often isn&apos;t enough for multi-cat homes.
         </p>
 
-        <div className="bg-red-50 border-l-4 border-red-500 p-6 my-6 rounded-r-xl">
-            <h4 className="font-bold text-red-900 mb-2">🛑 Stop "Masking" The Smell</h4>
+        <h3>The &quot;Nose Blindness&quot; Danger</h3>
+        <p>
+            You might get used to the smell (&quot;nose blind&quot;), but your guests certainly aren&apos;t.
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-xl">
+            <h4 className="font-bold text-blue-900 mb-2">💡 Pro Tip: The &quot;Nuclear&quot; Option</h4>
             <p className="text-red-800 mb-4">
-                Most cheap "odor control" litters just use heavy chemicals that are bad for your cat's lungs.
+                Most cheap &quot;odor control&quot; litters just use heavy chemicals that are bad for your cat&apos;s lungs.
             </p>
             <p className="text-red-800">
                 <strong>The Better Way:</strong> Use an unscented litter and add <a href="https://purrify.ca" target="_blank" className="font-bold underline hover:text-red-950">Purrify Deodorizer</a>.
             </p>
             <p className="font-bold text-red-900 mt-2">
-                Purrify uses enzymes to essentially "eat" the waste at a microscopic level. It kills the source of the smell instead of just spraying perfume on it.
+                Purrify uses enzymes to essentially &quot;eat&quot; the waste at a microscopic level. It kills the source of the smell instead of just spraying perfume on it.
             </p>
         </div>
 

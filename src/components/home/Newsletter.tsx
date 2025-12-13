@@ -28,7 +28,7 @@ export function Newsletter() {
               </h2>
 
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                We test new litters every month. Join our "No-Dust Club" and get our latest independent lab results sent straight to your inbox. No spam, ever.
+                We test new litters every month. Join our &quot;No-Dust Club&quot; and get our latest independent lab results sent straight to your inbox. No spam, ever.
               </p>
 
               <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
@@ -49,6 +49,9 @@ export function Newsletter() {
 
               {/* Social Proof Mini */}
               <div className="mt-12 flex items-center gap-4">
+                <h3 className="font-display text-xl font-bold text-white mr-4">
+                  Get the <span className="text-accent">&quot;Pro Tip&quot;</span> of the Week
+                </h3>
                 <div className="flex -space-x-4">
                   {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="w-12 h-12 rounded-full border-2 border-foreground overflow-hidden bg-white/10">
@@ -63,9 +66,10 @@ export function Newsletter() {
                     +45k
                   </div>
                 </div>
-                <div className="text-white/60 text-sm font-medium">
-                  Trusted by cat experts
-                </div>
+              </div>
+
+              <div className="text-white/60 text-sm font-medium mt-4">
+                Trusted by 45,000+ cat experts
               </div>
             </div>
 

@@ -11,7 +11,7 @@ export default function AboutPage() {
 
                 <div className="prose prose-lg prose-emerald max-w-none text-muted-foreground">
                     <p className="text-xl mb-8">
-                        We exist for one reason: To help you stop wasting money on cat litter that doesn't work.
+                        We exist for one reason: To help you stop wasting money on cat litter that doesn&apos;t work.
                     </p>
 
                     <h2 className="text-2xl font-bold text-foreground mb-4">Our Methodology</h2>
@@ -35,7 +35,7 @@ export default function AboutPage() {
 
                     <h2 className="text-2xl font-bold text-foreground mb-4">Why Trust Us?</h2>
                     <p className="mb-8">
-                        Because we're cat owners who got tired of the lies. "99% Dust Free" usually means "Clouds of Choking Dust". We're here to expose the marketing fluff and give you the raw data.
+                        Because we&apos;re cat owners who got tired of the lies. &quot;99% Dust Free&quot; usually means &quot;Clouds of Choking Dust&quot;. We&apos;re here to expose the marketing fluff and give you the raw data.
                     </p>
 
                     <Link href="/reviews" className="btn-primary inline-flex">

@@ -167,16 +167,16 @@ const buyingGuide = (
     <>
         <h3>The Mathematics of Cheap Litter</h3>
         <p>
-            Cheap litter often costs <em>more</em> in the long run. Why? Because it doesn't form tight clumps. When you scoop, the clump breaks apart, leaving dirty crumbs behind. This forces you to dump the entire box and refill it every week instead of every month.
+            Cheap litter often costs <em>more</em> in the long run. Why? Because it doesn&apos;t form tight clumps. When you scoop, the clump breaks apart, leaving dirty crumbs behind. This forces you to dump the entire box and refill it every week instead of every month.
         </p>
 
-        <h3>The "Grocery Store" Trap</h3>
+        <h3>The &quot;Grocery Store&quot; Trap</h3>
         <p>
             Most litters under $10 rely on heavy perfumes to mask odor because they lack the premium ingredients to absorb it.
         </p>
 
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-xl">
-            <h4 className="font-bold text-blue-900 mb-2">💡 The Budget "Super-Hack"</h4>
+            <h4 className="font-bold text-blue-900 mb-2">💡 The Budget &quot;Super-Hack&quot;</h4>
             <p className="text-blue-800 mb-4">
                 Here is how to get $40 performance for $15.
             </p>

@@ -12,13 +12,13 @@ export function ValueEquation() {
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <FadeUp>
-                        <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-                            What This Costs Us vs <span className="text-gradient-gold italic">What It Saves You</span>
+                        <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
+                            Here&apos;s The Deal:
                         </h2>
                     </FadeUp>
                     <FadeUp delay={0.1}>
                         <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
-                            We eat the cost. You get the truth. That's the deal.
+                            We eat the cost. You get the truth. That&apos;s the deal.
                         </p>
                     </FadeUp>
                 </div>

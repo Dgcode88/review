@@ -43,13 +43,13 @@ function SearchContent() {
     return (
         <div className="max-w-7xl mx-auto px-6 py-12 min-h-screen">
             <h1 className="font-display text-4xl font-bold mb-8">
-                Search Results for <span className="text-primary">"{query}"</span>
+                Search Results for <span className="text-primary">&quot;{query}&quot;</span>
             </h1>
 
             {results.length === 0 ? (
                 <div className="text-center py-20 bg-secondary/30 rounded-3xl">
                     <h2 className="text-2xl font-bold mb-4">No results found</h2>
-                    <p className="text-muted-foreground mb-8">Try searching for "clay", "natural", or "dust".</p>
+                    <p className="text-muted-foreground mb-8">Try searching for &quot;clay&quot;, &quot;natural&quot;, or &quot;dust&quot;.</p>
                     <Link href="/" className="btn-primary">Return Home</Link>
                 </div>
             ) : (

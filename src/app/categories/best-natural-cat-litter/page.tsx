@@ -169,15 +169,15 @@ const buyingGuide = (
             Clay litter is strip-mined and ends up in landfills forever. Natural litters (corn, wheat, pine, walnut) are sustainable, often flushable, and lighter.
         </p>
 
-        <h3>The Hidden Problem with Natural Litters</h3>
+        <h3>The &quot;Corn Smell&quot; Issue</h3>
         <p>
-            Natural litters have one major weakness: <strong>Odor Control</strong>. Because they are made of organic material (food, basically), they can start to ferment when mixed with urine, creating a distinct "barnyard" or sour smell.
+            Some users find that corn litter develops a sour fermented smell if not scooped daily. This is because it is organic matter.
         </p>
 
-        <div className="bg-green-50 border-l-4 border-green-500 p-6 my-6 rounded-r-xl">
-            <h4 className="font-bold text-green-900 mb-2">💡 The Natural Litter Cheat Code</h4>
-            <p className="text-green-800 mb-4">
-                You don't have to choose between saving the planet and having a fresh house.
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-xl">
+            <h4 className="font-bold text-blue-900 mb-2">💡 Pro Tip: Stop The Sour Smell</h4>
+            <p className="text-blue-800 mb-4">
+                Natural litters are more prone to bacterial growth than clay. Using a probiotic deodorizer like Purrify is virtually mandatory for corn/wheat litter to prevent that &quot;barnyard&quot; smell.
             </p>
             <p className="text-green-800">
                 <strong>The Solution:</strong> Add a probiotic booster like <a href="https://purrify.ca" target="_blank" className="font-bold underline hover:text-green-950">Purrify</a> to your natural litter.
@@ -189,7 +189,7 @@ const buyingGuide = (
 
         <h3>Corn vs. Wood vs. Grass</h3>
         <p>
-            <strong>Corn (World's Best):</strong> Clumps the best. Can smell sour.<br />
+            <strong>Corn (World&apos;s Best):</strong> Clumps the best. Can smell sour.<br />
             <strong>Wood (Okocat):</strong> Smells like lumber (nice). Clumps poorly.<br />
             <strong>Grass (SmartCat):</strong> Clumps amazing. Tracks everywhere.
         </p>

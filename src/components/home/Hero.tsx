@@ -31,7 +31,7 @@ export function Hero() {
           {/* Headline */}
           <FadeUp>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-[1.05] tracking-tight text-foreground">
-              We Spent <span className="text-primary font-bold">$47,000</span> Testing Every Major <span className="text-gradient-gold italic pr-2">Cat Litter</span> Brand. <br className="hidden md:block" /> Here's What Actually Works.
+              We Spent <span className="text-primary font-bold">$47,000</span> Testing Every Major <span className="text-gradient-gold italic pr-2">Cat Litter</span> Brand. <br className="hidden md:block" /> Here&apos;s What Actually Works.
             </h1>
           </FadeUp>
 
@@ -46,9 +46,11 @@ export function Hero() {
           <FadeUp delay={0.4} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <button
               onClick={() => document.getElementById('featured')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto px-8 py-4 bg-accent text-accent-foreground font-bold text-lg rounded-full shadow-lg shadow-accent/20 hover:shadow-xl hover:-translate-y-1 hover:bg-accent/90 transition-all duration-300 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-accent to-amber-500 text-white font-display font-bold text-xl rounded-full shadow-xl shadow-accent/30 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden group"
             >
-              See What Actually Works <ArrowRight className="w-5 h-5" />
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full" />
+              <span className="relative z-10">See What Actually Works</span>
+              <ArrowRight className="w-6 h-6 relative z-10" />
             </button>
             <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-primary/20 text-foreground font-bold text-lg rounded-full hover:bg-white hover:border-primary/50 transition-all duration-300">
               How We Test

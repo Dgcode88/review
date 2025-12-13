@@ -100,13 +100,13 @@ export function Methodology() {
             <FadeUp delay={0.1}>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 How We Actually Test <br />
-                <span className="text-gradient-gold italic">(Unlike Other 'Review' Sites)</span>
+                <span className="text-gradient-gold italic">(Unlike Other &apos;Review&apos; Sites)</span>
               </h2>
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <p className="text-lg text-white/60 mb-12 leading-relaxed font-light">
-                Most "review" sites test litter for 3-5 days. We test for 90 days. Minimum. Our comprehensive testing protocol combines laboratory analysis with real-world usage.
+              <p className="text-secondary/60 text-lg mb-8 leading-relaxed">
+                We&apos;re cat owners who got tired of the lies. &quot;99% Dust Free&quot; usually means &quot;Clouds of Choking Dust&quot;. We&apos;re here to expose the marketing fluff and give you the raw data.
               </p>
             </FadeUp>
 

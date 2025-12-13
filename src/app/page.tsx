@@ -3,8 +3,10 @@ import { Hero } from '@/components/home/Hero';
 import { TrustBar } from '@/components/home/TrustBar';
 import { FeaturedWinners } from '@/components/home/FeaturedWinners';
 import { Methodology } from '@/components/home/Methodology';
+import { ValueEquation } from '@/components/home/ValueEquation';
 import { LatestReviews } from '@/components/home/LatestReviews';
 import { CategoryNavigation } from '@/components/home/CategoryNavigation';
+import { Newsletter } from '@/components/home/Newsletter';
 import { Footer } from '@/components/home/Footer';
 
 export default function Page() {
@@ -16,8 +18,10 @@ export default function Page() {
         <TrustBar />
         <FeaturedWinners />
         <Methodology />
+        <ValueEquation />
         <LatestReviews />
         <CategoryNavigation />
+        <Newsletter />
       </main>
       <Footer />
     </div>

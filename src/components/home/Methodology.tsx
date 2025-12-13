@@ -99,14 +99,14 @@ export function Methodology() {
 
             <FadeUp delay={0.1}>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Science Meets <br />
-                <span className="text-gradient-gold italic">Real Life</span>
+                How We Actually Test <br />
+                <span className="text-gradient-gold italic">(Unlike Other 'Review' Sites)</span>
               </h2>
             </FadeUp>
 
             <FadeUp delay={0.2}>
               <p className="text-lg text-white/60 mb-12 leading-relaxed font-light">
-                We don't just scoop and sniff. Our comprehensive testing protocol combines laboratory analysis with real-world usage to give you the complete picture.
+                Most "review" sites test litter for 3-5 days. We test for 90 days. Minimum. Our comprehensive testing protocol combines laboratory analysis with real-world usage.
               </p>
             </FadeUp>
 

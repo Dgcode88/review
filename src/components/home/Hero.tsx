@@ -31,14 +31,14 @@ export function Hero() {
           {/* Headline */}
           <FadeUp>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-[1.05] tracking-tight text-foreground">
-              We Spent <span className="text-primary font-bold">$47,000</span> Testing Every Major <span className="text-gradient-gold italic pr-2">Cat Litter</span> Brand.
+              We Spent <span className="text-primary font-bold">$47,000</span> Testing Every Major <span className="text-gradient-gold italic pr-2">Cat Litter</span> Brand. <br className="hidden md:block" /> Here's What Actually Works.
             </h1>
           </FadeUp>
 
           {/* Subheadline (Hormozi Style) */}
-          <FadeUp delay={0.2} className="max-w-2xl mx-auto mb-12">
+          <FadeUp delay={0.2} className="max-w-3xl mx-auto mb-12">
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light">
-              Stop buying dusty, tracking, barely-clumping litter based on marketing hype. We spent 6 months testing 547 brands so you get the real data, not BS.
+              Stop buying dusty, tracking, barely-clumping litter based on marketing hype. We spent 6 months and $47K testing 547 brands so you get the real data, not BS.
             </p>
           </FadeUp>
 

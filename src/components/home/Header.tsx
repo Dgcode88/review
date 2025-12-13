@@ -3,18 +3,22 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Search, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const navLinks = [
-  { label: 'Top Picks', href: '#featured' },
-  { label: 'Reviews', href: '#latest' },
-  { label: 'Methodology', href: '#methodology' },
-  { label: 'Guides', href: '#newsletter' },
-  { label: 'About', href: '#about' },
+  { label: 'Top Picks', href: '/reviews' },
+  { label: 'Reviews', href: '/reviews' },
+  { label: 'Methodology', href: '/methodology' },
+  { label: 'Guides', href: '/guides' },
+  { label: 'About', href: '/about' },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +27,14 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setSearchOpen(false);
+    }
+  };
 
   return (
     <header
@@ -47,23 +59,44 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 key={index}
                 href={link.href}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-accent ${scrolled ? 'text-foreground/80' : 'text-foreground/80'
                   }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-4">
-            <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${scrolled ? 'bg-secondary hover:bg-secondary/80 text-primary' : 'bg-white/50 hover:bg-white/80 text-primary'
-              }`}>
-              <Search className="w-5 h-5" />
-            </button>
+            {searchOpen ? (
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search reviews..."
+                  autoFocus
+                  className="pl-4 pr-10 py-2 rounded-full border border-primary/20 bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm w-64"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onBlur={() => !searchQuery && setSearchOpen(false)}
+                />
+                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-primary">
+                  <Search className="w-4 h-4" />
+                </button>
+              </form>
+            ) : (
+              <button
+                onClick={() => setSearchOpen(true)}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${scrolled ? 'bg-secondary hover:bg-secondary/80 text-primary' : 'bg-white/50 hover:bg-white/80 text-primary'
+                  }`}
+              >
+                <Search className="w-5 h-5" />
+              </button>
+            )}
+
             <button className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${scrolled
               ? 'bg-primary text-primary-foreground hover:bg-primary/90'
               : 'bg-primary text-primary-foreground hover:bg-primary/90'
@@ -87,15 +120,27 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-xl p-6 md:hidden h-screen">
           <nav className="flex flex-col space-y-4">
+            <form onSubmit={handleSearch} className="mb-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search reviews..."
+                  className="w-full pl-4 pr-10 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              </div>
+            </form>
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 key={index}
                 href={link.href}
                 className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <hr className="border-border" />
             <button className="w-full bg-primary text-primary-foreground py-3 rounded-xl font-semibold shadow-lg">

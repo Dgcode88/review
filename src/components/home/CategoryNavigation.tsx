@@ -1,11 +1,13 @@
 'use client';
 
 import { Droplets, Leaf, Mountain, Sparkles, Zap, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 const categories = [
   {
     icon: Mountain,
     label: 'Clumping Clay',
+    slug: 'clumping-clay',
     count: '150+ Reviews',
     gradient: 'from-accent to-amber-600',
     bgGradient: 'from-accent/10 to-amber-600/10',
@@ -14,6 +16,7 @@ const categories = [
   {
     icon: Sparkles,
     label: 'Silica Crystal',
+    slug: 'silica-crystal',
     count: '80+ Reviews',
     gradient: 'from-primary to-emerald-600',
     bgGradient: 'from-primary/10 to-emerald-600/10',
@@ -22,6 +25,7 @@ const categories = [
   {
     icon: Leaf,
     label: 'Natural/Eco',
+    slug: 'natural-eco',
     count: '120+ Reviews',
     gradient: 'from-green-500 to-emerald-700',
     bgGradient: 'from-green-500/10 to-emerald-700/10',
@@ -30,6 +34,7 @@ const categories = [
   {
     icon: Zap,
     label: 'Lightweight',
+    slug: 'lightweight',
     count: '60+ Reviews',
     gradient: 'from-amber-400 to-orange-500',
     bgGradient: 'from-amber-400/10 to-orange-500/10',
@@ -38,6 +43,7 @@ const categories = [
   {
     icon: Droplets,
     label: 'Odor Control',
+    slug: 'odor-control',
     count: '90+ Reviews',
     gradient: 'from-primary to-green-700',
     bgGradient: 'from-primary/10 to-green-700/10',
@@ -59,19 +65,20 @@ export function CategoryNavigation() {
             <span className="text-white/90 font-medium">Find Your Match</span>
           </div>
           <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-4">
-            Browse by <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Category</span>
+            Find What <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Actually Works</span> for Your Situation
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Find the perfect litter for your cat's unique needs
+            Don't guess. Pick the category that matches your specific problem.
           </p>
         </div>
 
         {/* Category Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {categories.map((category, index) => (
-            <button
+            <Link
               key={index}
-              className="group relative bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 hover:bg-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden"
+              href={`/categories/${category.slug}`}
+              className="group relative bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 hover:bg-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden cursor-pointer block"
             >
               {/* Background Image */}
               <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
@@ -90,13 +97,13 @@ export function CategoryNavigation() {
                   {category.count}
                 </span>
               </div>
-            </button>
+            </Link>
           ))}
         </div>
 
         {/* Featured Categories Banner */}
         <div className="mt-16 grid md:grid-cols-2 gap-6">
-          <div className="relative bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500">
+          <Link href="/categories/clumping-clay" className="relative bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 block">
             <div className="absolute top-0 right-0 w-48 h-48 opacity-30">
               <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80" alt="" className="w-full h-full object-cover rounded-bl-3xl" />
             </div>
@@ -108,9 +115,9 @@ export function CategoryNavigation() {
                 Explore Now →
               </span>
             </div>
-          </div>
+          </Link>
 
-          <div className="relative bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500">
+          <Link href="/categories/natural-eco" className="relative bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 block">
             <div className="absolute top-0 right-0 w-48 h-48 opacity-30">
               <img src="https://images.unsplash.com/photo-1573865526739-10c1dd7aa5d0?w=400&q=80" alt="" className="w-full h-full object-cover rounded-bl-3xl" />
             </div>
@@ -122,7 +129,7 @@ export function CategoryNavigation() {
                 Explore Now →
               </span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

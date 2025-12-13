@@ -24,7 +24,7 @@ export function Newsletter() {
               </div>
 
               <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Get the <span className="text-accent">cleanest</span> litter box of your life.
+                Get Our Free <span className="text-accent">Litter Buying Guide</span> (Saves You $300+)
               </h2>
 
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
@@ -38,7 +38,7 @@ export function Newsletter() {
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/40 h-14 rounded-full px-6 focus-visible:ring-accent focus-visible:border-accent transition-all hover:bg-white/20"
                   />
                   <button type="submit" className="h-14 px-8 rounded-full bg-accent text-foreground hover:bg-white transition-all duration-300 font-bold text-lg shadow-lg shadow-accent/20 whitespace-nowrap">
-                    Join Free
+                    Get The Free Guide
                   </button>
                 </div>
                 <p className="text-white/40 text-sm flex items-center gap-2">

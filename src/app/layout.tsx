@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ComparisonProvider } from "@/context/ComparisonContext";
+import { ComparisonBar } from "@/components/compare/ComparisonBar";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -33,7 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${fraunces.variable} ${jetbrainsMono.variable} antialiased`}>
-        {children}
+        <ComparisonProvider>
+          {children}
+          <ComparisonBar />
+        </ComparisonProvider>
       </body>
     </html>
   );

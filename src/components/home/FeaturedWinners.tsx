@@ -66,12 +66,12 @@ export function FeaturedWinners() {
               <span className="font-semibold text-sm tracking-wide">2024 Award Winners</span>
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Top Rated <span className="text-gradient-gold italic font-serif">Cat Litters</span>
+              Winners That Actually Earn Their <span className="text-gradient-gold italic font-serif">Price Tag</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
-              We tested 547 brands to find the few that actually deliver. Here are the winners.
+              We tested 547 cat litters over 6 months. These are the only 4 worth buying.
             </p>
           </FadeUp>
         </div>

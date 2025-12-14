@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Search, ArrowRight } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { FadeUp, FadeIn, StaggerChildren } from '@/components/ui/motion';
@@ -52,9 +53,9 @@ export function Hero() {
               <span className="relative z-10">See What Actually Works</span>
               <ArrowRight className="w-6 h-6 relative z-10" />
             </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-primary/20 text-foreground font-bold text-lg rounded-full hover:bg-white hover:border-primary/50 transition-all duration-300">
+            <Link href="/methodology" className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-primary/20 text-foreground font-bold text-lg rounded-full hover:bg-white hover:border-primary/50 transition-all duration-300 inline-flex items-center justify-center">
               How We Test
-            </button>
+            </Link>
           </FadeUp>
 
           {/* Search Bar (Secondary) */}

@@ -6,8 +6,8 @@ import Link from 'next/link';
 const categories = [
   {
     icon: Mountain,
-    label: 'Clumping Clay',
-    slug: 'clumping-clay',
+    label: 'Best Clumping',
+    slug: 'best-clumping-cat-litter',
     count: '150+ Reviews',
     gradient: 'from-accent to-amber-600',
     bgGradient: 'from-accent/10 to-amber-600/10',
@@ -15,8 +15,8 @@ const categories = [
   },
   {
     icon: Sparkles,
-    label: 'Silica Crystal',
-    slug: 'silica-crystal',
+    label: 'Best Low Dust',
+    slug: 'best-low-dust-cat-litter',
     count: '80+ Reviews',
     gradient: 'from-slate-400 to-slate-600',
     bgGradient: 'from-slate-400/10 to-slate-600/10',
@@ -24,17 +24,17 @@ const categories = [
   },
   {
     icon: Leaf,
-    label: 'Natural/Eco',
-    slug: 'natural-eco',
+    label: 'Best Natural',
+    slug: 'best-natural-cat-litter',
     count: '120+ Reviews',
     gradient: 'from-primary to-emerald-600',
     bgGradient: 'from-primary/10 to-emerald-600/10',
     image: 'https://images.unsplash.com/photo-1573865526739-10c1dd7aa5d0?w=300&q=80'
   },
   {
-    icon: Zap,
-    label: 'Lightweight',
-    slug: 'lightweight',
+    icon: Heart,
+    label: 'Best Budget',
+    slug: 'best-budget-cat-litter',
     count: '60+ Reviews',
     gradient: 'from-emerald-400 to-teal-500',
     bgGradient: 'from-emerald-400/10 to-teal-500/10',
@@ -42,8 +42,8 @@ const categories = [
   },
   {
     icon: Droplets,
-    label: 'Odor Control',
-    slug: 'odor-control',
+    label: 'Best Odor Control',
+    slug: 'best-odor-control-cat-litter',
     count: '90+ Reviews',
     gradient: 'from-accent to-amber-700',
     bgGradient: 'from-accent/10 to-amber-700/10',
@@ -103,7 +103,7 @@ export function CategoryNavigation() {
 
         {/* Featured Categories Banner */}
         <div className="mt-16 grid md:grid-cols-2 gap-6">
-          <Link href="/categories/clumping-clay" className="relative bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 block">
+          <Link href="/categories/best-clumping-cat-litter" className="relative bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 block">
             <div className="absolute top-0 right-0 w-48 h-48 opacity-30">
               <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80" alt="" className="w-full h-full object-cover rounded-bl-3xl" />
             </div>
@@ -117,7 +117,7 @@ export function CategoryNavigation() {
             </div>
           </Link>
 
-          <Link href="/categories/natural-eco" className="relative bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 block">
+          <Link href="/categories/best-natural-cat-litter" className="relative bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl p-8 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 block">
             <div className="absolute top-0 right-0 w-48 h-48 opacity-30">
               <img src="https://images.unsplash.com/photo-1573865526739-10c1dd7aa5d0?w=400&q=80" alt="" className="w-full h-full object-cover rounded-bl-3xl" />
             </div>

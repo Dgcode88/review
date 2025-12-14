@@ -6,10 +6,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const navLinks = [
-  { label: 'Top Picks', href: '/reviews' },
   { label: 'Reviews', href: '/reviews' },
-  { label: 'Methodology', href: '/methodology' },
+  { label: 'Categories', href: '/categories/best-clumping-cat-litter' },
+  { label: 'Compare', href: '/compare' },
   { label: 'Guides', href: '/guides' },
+  { label: 'Methodology', href: '/methodology' },
   { label: 'Purrify', href: 'https://purrify.ca', external: true, highlight: true },
   { label: 'About', href: '/about' },
 ];

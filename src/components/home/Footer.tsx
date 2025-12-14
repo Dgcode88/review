@@ -1,25 +1,26 @@
 'use client';
 
+import Link from 'next/link';
 import { Facebook, Instagram, Twitter, Youtube, Heart } from 'lucide-react';
 
 const footerLinks = {
   reviews: [
-    { label: 'All Reviews', href: '#' },
-    { label: 'Top Rated', href: '#' },
-    { label: 'Budget Picks', href: '#' },
-    { label: 'Premium Options', href: '#' },
+    { label: 'All Reviews', href: '/reviews' },
+    { label: 'Best Clumping', href: '/categories/best-clumping-cat-litter' },
+    { label: 'Budget Picks', href: '/categories/best-budget-cat-litter' },
+    { label: 'Natural & Eco', href: '/categories/best-natural-cat-litter' },
   ],
   resources: [
-    { label: 'Testing Methodology', href: '#' },
-    { label: 'Buying Guide', href: '#' },
-    { label: 'Cat Care Tips', href: '#' },
-    { label: 'FAQ', href: '#' },
+    { label: 'Testing Methodology', href: '/methodology' },
+    { label: 'All Guides', href: '/guides' },
+    { label: 'Compare Products', href: '/compare' },
+    { label: 'Search', href: '/search' },
   ],
   company: [
-    { label: 'About Us', href: '#' },
-    { label: 'Contact', href: '#' },
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Purrify', href: 'https://purrify.ca' },
+    { label: 'Contact', href: '/about' },
+    { label: 'Methodology', href: '/methodology' },
   ],
 };
 
@@ -83,13 +84,13 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.reviews.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-secondary/60 hover:text-accent transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -103,13 +104,13 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-secondary/60 hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -123,13 +124,25 @@ export function Footer() {
             <ul className="space-y-4">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-secondary/60 hover:text-accent transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    {link.label}
-                  </a>
+                  {link.href.startsWith('http') ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-secondary/60 hover:text-accent transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-secondary/60 hover:text-accent transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

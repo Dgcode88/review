@@ -8,7 +8,8 @@ const categories = [
     icon: Mountain,
     label: 'Best Clumping',
     slug: 'best-clumping-cat-litter',
-    count: '150+ Reviews',
+    count: '150+ Tested',
+    painPoint: 'Tired of clumps that fall apart?',
     gradient: 'from-accent to-amber-600',
     bgGradient: 'from-accent/10 to-amber-600/10',
     image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&q=80'
@@ -17,7 +18,8 @@ const categories = [
     icon: Sparkles,
     label: 'Best Low Dust',
     slug: 'best-low-dust-cat-litter',
-    count: '80+ Reviews',
+    count: '80+ Tested',
+    painPoint: 'Coughing every time you scoop?',
     gradient: 'from-slate-400 to-slate-600',
     bgGradient: 'from-slate-400/10 to-slate-600/10',
     image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&q=80'
@@ -26,7 +28,8 @@ const categories = [
     icon: Leaf,
     label: 'Best Natural',
     slug: 'best-natural-cat-litter',
-    count: '120+ Reviews',
+    count: '120+ Tested',
+    painPoint: 'Want eco-friendly that actually works?',
     gradient: 'from-primary to-emerald-600',
     bgGradient: 'from-primary/10 to-emerald-600/10',
     image: 'https://images.unsplash.com/photo-1573865526739-10c1dd7aa5d0?w=300&q=80'
@@ -35,7 +38,8 @@ const categories = [
     icon: Heart,
     label: 'Best Budget',
     slug: 'best-budget-cat-litter',
-    count: '60+ Reviews',
+    count: '60+ Tested',
+    painPoint: 'Need quality without the premium price?',
     gradient: 'from-emerald-400 to-teal-500',
     bgGradient: 'from-emerald-400/10 to-teal-500/10',
     image: 'https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=300&q=80'
@@ -44,7 +48,8 @@ const categories = [
     icon: Droplets,
     label: 'Best Odor Control',
     slug: 'best-odor-control-cat-litter',
-    count: '90+ Reviews',
+    count: '90+ Tested',
+    painPoint: 'House smells like a litter box?',
     gradient: 'from-accent to-amber-700',
     bgGradient: 'from-accent/10 to-amber-700/10',
     image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=300&q=80'
@@ -64,11 +69,11 @@ export function CategoryNavigation() {
             <Heart className="w-5 h-5 text-rose-400" />
             <span className="text-white/90 font-medium">Find Your Match</span>
           </div>
-          <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-4">
-            Find What <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Actually Works</span> for Your Situation
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Stop Guessing. <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Find Your Perfect Match</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Don&apos;t guess. Pick the category that matches your specific problem.
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            Every cat and home is different. Pick the category that solves <span className="font-bold text-white">your specific problem</span>.
           </p>
         </div>
 
@@ -93,8 +98,11 @@ export function CategoryNavigation() {
                 <span className="font-display text-xl font-bold text-white mb-2">
                   {category.label}
                 </span>
-                <span className="text-sm text-white/60">
+                <span className="text-xs text-white/50 mb-3">
                   {category.count}
+                </span>
+                <span className="text-sm text-amber-300 font-medium">
+                  {category.painPoint}
                 </span>
               </div>
             </Link>

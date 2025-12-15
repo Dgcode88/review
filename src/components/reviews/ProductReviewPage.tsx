@@ -7,6 +7,7 @@ import { ScoreBadge } from './ui/ScoreBadge';
 import { ScoreMeter } from './ui/ScoreMeter';
 import { ComparisonWidget } from './ui/ComparisonWidget';
 import { RecommendedAddOn } from './RecommendedAddOn';
+import { OdorEliminationBonus } from './OdorEliminationBonus';
 import { FadeIn, FadeUp, StaggerChildren } from '@/components/ui/motion';
 import { Header } from '@/components/home/Header';
 import { Footer } from '@/components/home/Footer';
@@ -203,6 +204,9 @@ export function ProductReviewPage({ data, children }: ProductReviewPageProps) {
                             <div className="prose prose-lg prose-headings:font-display prose-headings:font-bold prose-p:text-muted-foreground prose-img:rounded-3xl prose-a:text-primary max-w-none">
                                 {children}
                             </div>
+
+                            {/* Odor Elimination Bonus Section */}
+                            <OdorEliminationBonus productName={data.name} />
 
                         </div>
 

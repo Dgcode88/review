@@ -5,9 +5,10 @@ import { CountUp } from "@/components/ui/CountUp";
 
 export function TrustBar() {
   const stats = [
-    { label: "Spent on Testing", value: "$47,000+" },
-    { label: "Cat Owners Trust Us", value: "12,847" },
+    { label: "Hours of Lab Testing", value: "2,847" },
+    { label: "Products Tested", value: "547" },
     { label: "Sponsored Reviews", value: "Zero" },
+    { label: "Money Spent", value: "$47,000+" },
   ];
 
   return (
@@ -19,8 +20,8 @@ export function TrustBar() {
           className="text-center group cursor-default"
         >
           <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-1 group-hover:text-accent transition-colors duration-300">
-            {stat.label === "Spent on Testing" ? <><span className="text-secondary">$</span><CountUp value={47000} suffix="+" /></> :
-              stat.label === "Cat Owners Trust Us" ? <CountUp value={12847} /> :
+            {stat.label === "Hours of Lab Testing" ? <CountUp value={2847} /> :
+              stat.label === "Products Tested" ? <CountUp value={547} /> :
                 stat.value}
           </div>
           <div className="text-primary/60 text-[10px] md:text-xs font-bold tracking-widest uppercase">

@@ -12,13 +12,16 @@ export function ValueEquation() {
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <FadeUp>
-                        <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
-                            Here&apos;s The Deal:
+                        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                            The <span className="text-gradient-gold italic">Value Equation</span>
                         </h2>
                     </FadeUp>
                     <FadeUp delay={0.1}>
-                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
-                            We eat the cost. You get the truth. That&apos;s the deal.
+                        <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto leading-relaxed mb-2">
+                            We spent <span className="font-bold">$70,000+</span> and <span className="font-bold">2,847 hours</span> testing.
+                        </p>
+                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                            You get the truth for free. That's the deal.
                         </p>
                     </FadeUp>
                 </div>
@@ -36,15 +39,19 @@ export function ValueEquation() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
-                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">$47,000</strong> buying 547 products at retail price</span>
+                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">$47,000</strong> buying 547 litters at retail price (no freebies)</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
-                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">$23,000</strong> on lab testing equipment</span>
+                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">$23,000</strong> on lab equipment & testing supplies</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
-                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">2,847 hours</strong> testing and analyzing</span>
+                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">2,847 hours</strong> of testing, measuring, and analyzing</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
+                                <span className="text-lg text-muted-foreground"><strong className="text-foreground">Zero</strong> sponsored reviews or affiliate pressure</span>
                             </li>
                         </ul>
                     </FadeIn>
@@ -61,15 +68,19 @@ export function ValueEquation() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                                <span className="text-lg text-white/80"><strong className="text-white">20+ hours</strong> of confused research</span>
+                                <span className="text-lg text-white/80"><strong className="text-white">$340+/year</strong> saved by choosing the right litter</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                                <span className="text-lg text-white/80"><strong className="text-white">$340/year</strong> on average (by choosing the right litter)</span>
+                                <span className="text-lg text-white/80"><strong className="text-white">20+ hours</strong> of confused Amazon research</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                                <span className="text-lg text-white/80">Countless hours dealing with <strong className="text-white">dust, tracking, and odor</strong></span>
+                                <span className="text-lg text-white/80">No more wasting money on <strong className="text-white">litters that don't work</strong></span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                                <span className="text-lg text-white/80">Instant access to <strong className="text-white">real data</strong>, not marketing hype</span>
                             </li>
                         </ul>
                     </FadeIn>

@@ -20,12 +20,14 @@ export function BudgetHackBanner() {
           </div>
 
           {/* Heading */}
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
-            The $15 Budget Hack
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-4 leading-tight">
+            The <span className="text-gradient-gold italic">$15 Budget Hack</span>
           </h2>
-          <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Turn any cheap litter into <span className="font-bold text-emerald-600">premium performance</span>.
-            Our testers saved an average of <span className="font-bold text-emerald-600">$240/year</span> with this one trick.
+          <p className="text-xl md:text-2xl text-center text-foreground mb-2 max-w-3xl mx-auto">
+            Turn <span className="font-bold">any cheap litter</span> into premium performance.
+          </p>
+          <p className="text-lg text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Our testers saved an average of <span className="font-bold text-emerald-600">$240/year</span> with this one simple addition.
           </p>
 
           {/* Main Card */}

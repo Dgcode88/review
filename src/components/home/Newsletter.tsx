@@ -28,7 +28,7 @@ export function Newsletter() {
               </h2>
 
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                We test new litters every month. Join our &quot;No-Dust Club&quot; and get our latest independent lab results sent straight to your inbox. No spam, ever.
+                <span className="font-bold text-white">Stop wasting money on bad litter.</span> Get our weekly lab results, exclusive buying guides, and money-saving hacks. Plus, instant access to our <span className="text-accent font-semibold">$15 Budget Hack</span> that turns cheap litter into premium performance.
               </p>
 
               <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
@@ -37,8 +37,9 @@ export function Newsletter() {
                     placeholder="Enter your email..."
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/40 h-14 rounded-full px-6 focus-visible:ring-accent focus-visible:border-accent transition-all hover:bg-white/20"
                   />
-                  <button type="submit" className="h-14 px-8 rounded-full bg-accent text-foreground hover:bg-white transition-all duration-300 font-bold text-lg shadow-lg shadow-accent/20 whitespace-nowrap">
-                    Get The Free Guide
+                  <button type="submit" className="h-14 px-8 rounded-full bg-accent text-foreground hover:bg-white transition-all duration-300 font-bold text-lg shadow-lg shadow-accent/20 whitespace-nowrap flex items-center gap-2">
+                    Send Me The Guide
+                    <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
                 <p className="text-white/40 text-sm flex items-center gap-2">

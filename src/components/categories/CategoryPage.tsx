@@ -110,12 +110,46 @@ export function CategoryPage({
 
     // Filter Logic (Client-side for demo)
     const filteredProducts = products.filter(product => {
-        // Logic would go here to match product tags/attributes against activeFilters
-        // For MVP/Demo we pass through or implement basic check if tags exist
+        // If no filters active, show all
         if (Object.keys(activeFilters).length === 0 || Object.values(activeFilters).every(arr => arr.length === 0)) return true;
 
-        // Basic implementation assuming product.tags matches filter IDs
-        // This is a simplification. Real implementation needs mapping.
+        // Check each active filter group
+        for (const [groupId, selectedOptions] of Object.entries(activeFilters)) {
+            if (selectedOptions.length === 0) continue;
+
+            // Price filter
+            if (groupId === 'price') {
+                const priceNum = parseFloat(product.price.replace(/[^0-9.]/g, ''));
+                const matchesPrice = selectedOptions.some(opt => {
+                    if (opt === 'budget') return priceNum < 15;
+                    if (opt === 'mid') return priceNum >= 15 && priceNum <= 25;
+                    if (opt === 'premium') return priceNum > 25;
+                    return false;
+                });
+                if (!matchesPrice) return false;
+            }
+
+            // Type/Material filter
+            if (groupId === 'type') {
+                const productType = product.type.toLowerCase();
+                const matchesType = selectedOptions.some(opt => {
+                    if (opt === 'clay') return productType.includes('clay');
+                    if (opt === 'natural') return productType.includes('natural') || productType.includes('corn') || productType.includes('wheat') || productType.includes('plant');
+                    if (opt === 'crystal') return productType.includes('crystal') || productType.includes('silica');
+                    return false;
+                });
+                if (!matchesType) return false;
+            }
+
+            // Feature filter - check tags
+            if (groupId === 'feature') {
+                const matchesFeature = selectedOptions.some(opt => 
+                    product.tags.some(tag => tag.toLowerCase().includes(opt.toLowerCase()))
+                );
+                if (!matchesFeature) return false;
+            }
+        }
+
         return true;
     }).sort((a, b) => {
         if (sortBy === 'rating') return b.score - a.score;

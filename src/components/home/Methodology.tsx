@@ -7,33 +7,26 @@ const methodologyPoints = [
   {
     icon: Beaker,
     title: 'Lab Testing',
-    description: 'Every product undergoes 30+ standardized tests in our facility',
+    description: 'Every product undergoes 30+ standardized tests measuring dust, clumping, tracking, and odor',
     color: 'bg-accent/20 text-accent',
   },
   {
     icon: Microscope,
-    title: 'Scientific Analysis',
-    description: 'Dust levels, clumping strength, and odor control measured precisely',
-    color: 'bg-primary/20 text-primary', // Adjusted for light background potentially if used there, but here it's dark bg usually? Wait, previous Methodology had bg-foreground? 
-    // Let's check: previous Methodology used `bg-foreground` (dark).
-    // So `text-primary` on dark might be low contrast if primary is dark green.
-    // Primary #15664C is dark.
-    // I should use `text-primary-foreground` or a lighter variant? 
-    // Actually `bg-primary/20` means dark green background. `text-primary` on dark bg is barely visible.
-    // I'll make it `text-emerald-300` or similar for dark mode visibility, or just keep it `text-primary-foreground` (white) if consistent.
-    // Previous code: `text-primary-foreground` (white).
+    title: 'Scientific Measurement',
+    description: 'Precise instruments measure particle size, moisture absorption, and ammonia neutralization',
+    color: 'bg-emerald-500/20 text-emerald-300',
   },
   {
     icon: ClipboardCheck,
-    title: 'Real-World Usage',
-    description: '90-day home trials with multiple cats and litter box setups',
+    title: 'Real-World Testing',
+    description: '90-day home trials with multiple cats, different box types, and various scooping schedules',
     color: 'bg-accent/20 text-accent',
   },
   {
     icon: LineChart,
     title: 'Data-Driven Scoring',
-    description: 'Objective metrics combined with expert evaluation for final ratings',
-    color: 'bg-primary/20 text-white', // Primary foreground
+    description: 'Objective metrics + expert evaluation = brutally honest ratings (no marketing BS)',
+    color: 'bg-emerald-500/20 text-emerald-300',
   },
 ];
 
@@ -98,15 +91,17 @@ export function Methodology() {
             </FadeUp>
 
             <FadeUp delay={0.1}>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                How We Actually Test <br />
-                <span className="text-gradient-gold italic">(Unlike Other &apos;Review&apos; Sites)</span>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                How We <span className="text-gradient-gold italic">Actually</span> Test
               </h2>
+              <p className="text-2xl text-white/90 mb-4">
+                (Unlike Other "Review" Sites)
+              </p>
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <p className="text-secondary/60 text-lg mb-8 leading-relaxed">
-                We&apos;re cat owners who got tired of the lies. &quot;99% Dust Free&quot; usually means &quot;Clouds of Choking Dust&quot;. We&apos;re here to expose the marketing fluff and give you the raw data.
+              <p className="text-white/70 text-lg mb-8 leading-relaxed">
+                We're cat owners who got tired of the lies. <span className="font-bold text-white">"99% Dust Free"</span> usually means <span className="font-bold text-white">"Clouds of Choking Dust"</span>. We buy every product at retail price, test it for 90 days, and give you the raw data.
               </p>
             </FadeUp>
 

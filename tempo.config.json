@@ -1,4 +1,5 @@
 {
+    "framework": "nextjs",
     "typography": [
       {
         "name": "Header 1",

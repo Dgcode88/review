@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Star, Crown, Award, Sparkles, ArrowRight, Check } from 'lucide-react';
+import { Star, Crown, Award, Sparkles, ArrowRight, Check, Zap } from 'lucide-react';
 import { ScalePop, StaggerChildren, FadeUp } from '@/components/ui/motion';
+import Link from 'next/link';
+import { PurrifyLink } from '@/components/reviews/PurrifyLink';
 
 const featuredProducts = [
   {
@@ -16,6 +18,9 @@ const featuredProducts = [
     specs: ['99% Dust Free', 'Hard Clumps', 'Low Tracking'],
     gradient: 'from-[#D9B373] to-[#B38B4D]', // Gold
     size: 'large',
+    pricePerDay: '$0.42',
+    worthIf: 'You want zero dust and rock-hard clumps',
+    skipIf: 'You need lightweight or flushable',
   },
   {
     id: 2,
@@ -28,6 +33,9 @@ const featuredProducts = [
     specs: ['Flushable', 'Lightweight', 'Eco-Friendly'],
     gradient: 'from-[#15664C] to-[#0D4030]', // Forest/Teal
     size: 'medium',
+    pricePerDay: '$0.58',
+    worthIf: 'You want eco-friendly and flushable',
+    skipIf: "You're on a tight budget",
   },
   {
     id: 3,
@@ -40,6 +48,9 @@ const featuredProducts = [
     specs: ['Health Monitor', 'Odor Control', 'Non-Clumping'],
     gradient: 'from-slate-500 to-slate-700',
     size: 'medium',
+    pricePerDay: '$1.20',
+    worthIf: 'You want health monitoring features',
+    skipIf: 'You prefer traditional clumping',
   },
   {
     id: 4,
@@ -52,6 +63,9 @@ const featuredProducts = [
     specs: ['Probiotic', 'Flat Top Clumps', 'Unscented'],
     gradient: 'from-[#8B5E3C] to-[#6F4E37]',
     size: 'medium',
+    pricePerDay: '$0.38',
+    worthIf: 'You want premium quality at budget price',
+    skipIf: 'You need scented options',
   },
 ];
 
@@ -65,13 +79,16 @@ export function FeaturedWinners() {
               <Crown className="w-4 h-4 text-accent" />
               <span className="font-semibold text-sm tracking-wide">2024 Award Winners</span>
             </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Winners That Actually Earn Their <span className="text-gradient-gold italic font-serif">Price Tag</span>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Only <span className="text-gradient-gold italic font-serif">4 Litters</span> Passed Our Tests
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
-              We tested 547 cat litters over 6 months. These are the only 4 worth buying.
+            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto leading-relaxed mb-2">
+              <span className="font-bold">543 failed.</span> These 4 actually work.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Tested for 6 months in real homes with real cats. No marketing BS.
             </p>
           </FadeUp>
         </div>
@@ -118,12 +135,30 @@ export function FeaturedWinners() {
                     {product.name}
                   </h3>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {product.specs.map((spec, i) => (
                       <span key={i} className="inline-flex items-center gap-1 bg-secondary text-secondary-foreground text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-md">
                         <Check className="w-3 h-3 text-primary" /> {spec}
                       </span>
                     ))}
+                  </div>
+
+                  {/* Price per day */}
+                  <div className="mb-4 p-3 bg-accent/10 rounded-lg border border-accent/20">
+                    <div className="text-xs text-muted-foreground mb-1">Cost per day</div>
+                    <div className="text-2xl font-bold text-accent">{product.pricePerDay}</div>
+                  </div>
+
+                  {/* Worth buying if / Skip if */}
+                  <div className="space-y-2 mb-6 text-sm">
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-foreground/80">{product.worthIf}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold">✗</span>
+                      <span className="text-foreground/80">{product.skipIf}</span>
+                    </div>
                   </div>
 
                   <div className="mt-auto pt-4 border-t border-border flex items-center justify-between group-hover:text-primary transition-colors">
@@ -136,10 +171,18 @@ export function FeaturedWinners() {
           ))}
         </StaggerChildren>
 
-        <div className="mt-16 text-center">
-          <button className="px-8 py-4 bg-white border-2 border-border hover:border-primary text-foreground font-bold rounded-full transition-all duration-300 shadow-sm hover:shadow-lg flex items-center gap-2 mx-auto">
+        <div className="mt-16 text-center space-y-6">
+          <Link href="/reviews" className="px-8 py-4 bg-white border-2 border-border hover:border-primary text-foreground font-bold rounded-full transition-all duration-300 shadow-sm hover:shadow-lg inline-flex items-center gap-2">
             View All 547 Reviews <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
+          
+          {/* Subtle Purrify Tip */}
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <Zap className="w-4 h-4 text-emerald-500" />
+            <span>Pro tip: Pair any winner with</span>
+            <PurrifyLink variant="inline">Purrify</PurrifyLink>
+            <span>to double its lifespan</span>
+          </div>
         </div>
       </div>
     </section>
